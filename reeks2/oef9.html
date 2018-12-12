@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="validate" onclick="testwhile()" name="validate">start</button>
+    <script>
+
+
+
+      function testwhile(){
+        let woordP = prompt("Voer een woord in met de letter 'p'");
+
+        while(!woordP.includes("p")){
+          woordP = prompt("Geen p gevonden. Voer een woord in met de letter 'p'");
+        } alert(woordP);
+      }
+    </script>
+  </body>
+</html>

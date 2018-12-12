@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="validate" onclick="BMI()" name="validate">Calculate BMI</button>
+    <script>
+
+
+      function BMI(){
+      let hoogte = prompt("Wat is uw hoogte in cm")
+      let gewicht = prompt("wat is uw gewicht in kg?")
+      let bmi = parseFloat(gewicht/((hoogte/100) * (hoogte/100))).toFixed(2)
+      alert("Je BMI is " + bmi)
+      if(bmi > 40){
+        alert("Je hebt morbide obesitas");
+      } else if(bmi > 35) {
+        alert("Je hebt ernstig overgewicht")
+      } else if(bmi > 30){
+        alert("Je hebt matig overgewicht")
+      } else if(bmi > 25){
+        alert("Je hebt overgewicht")
+      } else if (bmi > 18.5) {
+        alert("Je bent normaal gebouwd")
+      } else if(bmi <= 18.5) {
+        alert("Je bent ondervoed")
+      }
+        }
+    </script>
+  </body>
+</html>

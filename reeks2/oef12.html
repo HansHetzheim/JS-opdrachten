@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="validate" onclick="TemperatureConversion()" name="validate">start</button>
+    <script>
+
+
+      function TemperatureConversion(){
+      let keuze = parseInt(prompt("make your choice: 0 End of the program, 1 Celsius to Fahrenheit, 2 Celsius to Kelvin, 3 Fahrenheit to Celsius, 4 Fahrenheit to Kelvin, 5 Kelvin to Celsius, 6 Kelvin to Fahrenheit"));
+      let celcius, fahrenheit, kelvin;
+      switch (keuze) {
+        case 0:
+          break;
+        case 1:
+        celcius = prompt("What is the temperature °C?")
+        fahrenheit = (celcius * 9/5) + 32
+        alert(celcius + "°C is " + fahrenheit + "°Fahrenheit")
+          break;
+        case 2:
+        celcius = prompt("What is the temperature °C?")
+        kelvin = (celcius + 273.15)
+        alert(celcius + "°C is " + kelvin + "°kelvin")
+          break;
+        case 3:
+        fahrenheit = prompt("What is the temperature °F?")
+        celcius = (fahrenheit - 32) / (9/5)
+        alert(fahrenheit + " °F is " + celcius + " °Celcius")
+          break;
+        case 4:
+        fahrenheit = prompt("What is the temperature °F?")
+        kelvin = (fahrenheit - 32) * (5/9) + 273,15
+        alert(fahrenheit + " °F is " + kelvin + "°kelvin")
+          break;
+        case 5:
+        kelvin = prompt("What is the temperature °kelvin?")
+        celcius = kelvin - 273.15
+        alert(kelvin + " °kelvin is " + celcius + " °C")
+          break;
+        case 6:
+        kelvin = prompt("What is the temperature °kelvin?")
+        fahrenheit = (kelvin * 9/5) - 459.67
+        alert(kelvin + " °kelvin is " + fahrenheit +"°F")
+          break;
+        default:
+        alert("No valid number")
+          }
+        }
+      </script>
+    </body>
+  </html>

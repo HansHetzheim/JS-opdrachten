@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="validate" onclick="calcAverage()" name="validate">start</button>
+    <script>
+
+      let result = 0;
+      let counter = 0;
+
+      function calcAverage(){
+        let getal = parseFloat(prompt("Geef een geheel getal in"));
+        while (!Number.isInteger(getal)) {
+          getal = parseFloat(prompt("Dit was geen geheel getal. Geef een geheel getal in"));
+        }
+        counter++;
+        result += getal;
+        alert(result);
+        alert(counter);
+        alert(result/counter);
+
+        }
+
+    </script>
+  </body>
+</html>
